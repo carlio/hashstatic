@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+import os
+import sys
+import hashstatic
+
+if len(sys.argv) < 2:
+    print 'Usage: ./makehash <directory>'
+    sys.exit(1)
+
+directory = sys.argv[1]
+
+if not os.path.exists(directory):
+    sys.stderr.write("%s does not exist\n" % directory)
+    sys.exit(1)
+
+if not os.path.isdir(directory):
+    sys.stderr.write("%s is not a directory\n" % directory)
+    sys.exit(1)
+
+sys.stdout.write(hashstatic.generate_hash(directory))
+sys.stdout.write('\n')
