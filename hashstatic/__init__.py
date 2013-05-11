@@ -17,6 +17,11 @@ def generate_hash(directory, extensions=None):
     for curdir, subdirs, files in os.walk(directory):
         # we can ignore subdirs as the contents shows up later from os.walk
         for filename in files:
+            for ext in extensions:
+                if filename.endswith(ext):
+                    break
+            else:
+                continue
             filepath = os.path.join(curdir, filename)
             with open(filepath, 'rb') as f:
                 while True:
