@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 __version__ = '0.1'
 
-_packages = find_packages('shrubbery', exclude=["*.tests", "*.tests.*", "tests.*", "tests"])
+_packages = find_packages('hashstatic', exclude=["*.tests", "*.tests.*", "tests.*", "tests"])
 
 try:
     _thisdir = os.path.join(os.path.dirname(__file__))
