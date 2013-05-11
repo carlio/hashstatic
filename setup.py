@@ -15,6 +15,7 @@ metadata = {
     'name':                   'hashstatic',
     'version':                __version__,
     'packages':               _packages,
+    'scripts':                ['scripts/makehash'],
     'include_package_data':   True,
     'author':                 'Carl Crowder',
     'author_email':           'hashstatic@jqx.be',
