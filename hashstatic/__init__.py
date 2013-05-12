@@ -14,7 +14,7 @@ def generate_hash(directory, extensions=None):
     extensions = extensions or _default_extensions
     md5 = hashlib.md5()
 
-    for curdir, subdirs, files in os.walk(directory):
+    for curdir, _, files in os.walk(directory):
         # we can ignore subdirs as the contents shows up later from os.walk
         for filename in files:
             for ext in extensions:
